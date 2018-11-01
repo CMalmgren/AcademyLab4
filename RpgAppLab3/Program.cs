@@ -6,15 +6,17 @@ namespace RpgAppLab3
     {
         static void Main(string[] args)
         {
-            var rnd = new Random();
+            Random rnd = new Random();
+
             Console.WriteLine("What do you need?");
-            var command = Console.ReadLine();
+
+            string command = Console.ReadLine();
+
             if (command == "roll D20") Console.WriteLine("not implemented :(");
             if (command == "names")
             {
-                var allNames = new[] { "Briana", "Ben", "David",
-            "Dana", "Felicia", "Felix" };
-                var randomIndex = rnd.Next(allNames.Length);
+                string[] allNames = new[] { "Briana", "Ben", "David", "Dana", "Felicia", "Felix" };
+                int randomIndex = rnd.Next(allNames.Length);
                 Console.WriteLine(allNames[randomIndex]);
             }
             Console.ReadKey();
